@@ -1,4 +1,4 @@
-package com.sigiri.findingfalcone
+package com.sigiri.findingfalcone.ui.activity
 
 import android.os.Bundle
 import com.sigiri.findingfalcone.core.BaseActivity
