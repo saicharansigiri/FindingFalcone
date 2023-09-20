@@ -32,18 +32,20 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 }
 
 dependencies {
 
-    implementation GoogleAndroid.MATERIAL_DESIGN
+    // Androidx UI
     implementation AndroidXUI.CONSTRAINT_LAYOUT
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
+
+    //Lifecycle
+    implementation Lifecycle.LIVEDATA
+    implementation Lifecycle.VIEW_MODEL
+    implementation Lifecycle.RUNTIME
 
     //testing
     testImplementation AndroidXTesting.JUNIT
@@ -52,4 +54,11 @@ dependencies {
 
     implementation AndroidXMiscellaneous.CORE_KTX
     implementation AndroidXMiscellaneous.APP_COMPAT
+
+    //Google Android
+    implementation GoogleAndroid.GSON
+    implementation GoogleAndroid.MATERIAL_DESIGN
+
+    //network
+    implementation NetworkLib.RETROFIT
 }

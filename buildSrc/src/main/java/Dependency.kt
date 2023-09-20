@@ -17,6 +17,7 @@ object AndroidXMiscellaneous {
 
 object GoogleAndroid {
     const val MATERIAL_DESIGN = "com.google.android.material:material:1.9.0"
+    const val GSON = "com.google.code.gson:gson:2.10.1"
 }
 
 object AndroidXUI {
@@ -31,4 +32,16 @@ object AndroidXTesting {
     const val JUNIT = "junit:junit:4.13.2"
     const val EXT_JUNIT_KTX = "androidx.test.ext:junit-ktx:1.1.5"
     const val ESPRESSO_CORE = "androidx.test.espresso:espresso-core:3.5.1"
+}
+
+object NetworkLib {
+    private const val retrofitVersion = "2.9.0"
+    const val RETROFIT = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+}
+
+object Lifecycle {
+    private const val lifecycleVersion = "2.6.2"
+    const val VIEW_MODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    const val LIVEDATA = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+    const val RUNTIME = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion"
 }
