@@ -1,33 +1,23 @@
 package com.sigiri.findingfalcone.ui.fragment
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import com.sigiri.findingfalcone.R
+import androidx.lifecycle.ViewModelProvider
+import com.sigiri.findingfalcone.core.BaseFragment
+import com.sigiri.findingfalcone.databinding.FragmentSearchPlacesBinding
 import com.sigiri.findingfalcone.viewmodel.SearchPlacesViewModel
 
-class SearchPlacesFragment : Fragment() {
+class SearchPlacesFragment : BaseFragment<SearchPlacesViewModel, FragmentSearchPlacesBinding>() {
 
-    companion object {
-        fun newInstance() = SearchPlacesFragment()
+    override fun setUpViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): FragmentSearchPlacesBinding {
+        return FragmentSearchPlacesBinding.inflate(inflater, container, false)
     }
 
-    private lateinit var viewModel: SearchPlacesViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_search_places, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SearchPlacesViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun setUpViewModel(): SearchPlacesViewModel {
+        return ViewModelProvider(this).get(SearchPlacesViewModel::class.java)
     }
 
 }
