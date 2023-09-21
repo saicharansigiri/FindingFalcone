@@ -65,4 +65,5 @@ dependencies {
 
     //network
     implementation NetworkLib.RETROFIT
+    implementation NetworkLib.GSON_CONVERTOR
 }

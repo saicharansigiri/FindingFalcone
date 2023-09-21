@@ -37,6 +37,7 @@ object AndroidXTesting {
 object NetworkLib {
     private const val retrofitVersion = "2.9.0"
     const val RETROFIT = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    const val GSON_CONVERTOR = "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
 }
 
 object Lifecycle {
