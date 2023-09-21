@@ -47,6 +47,10 @@ dependencies {
     implementation Lifecycle.VIEW_MODEL
     implementation Lifecycle.RUNTIME
 
+    //Navigation
+    implementation Navigation.NAVIGATION_FRAGMENT
+    implementation Navigation.NAVIGATION_UI
+
     //testing
     testImplementation AndroidXTesting.JUNIT
     androidTestImplementation AndroidXTesting.EXT_JUNIT
