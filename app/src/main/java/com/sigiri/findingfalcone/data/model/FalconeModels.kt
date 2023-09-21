@@ -1,9 +1,5 @@
 package com.sigiri.findingfalcone.data.model
 
-data class Planets(
-    val data: List<Planet>
-)
-
 data class Planet(
     val name: String,
     val distance: Int
