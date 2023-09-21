@@ -2,7 +2,7 @@ package com.sigiri.findingfalcone.data.api
 
 import com.sigiri.findingfalcone.data.model.FindFalconeRequest
 import com.sigiri.findingfalcone.data.model.FindingFalconeResponse
-import com.sigiri.findingfalcone.data.model.Planets
+import com.sigiri.findingfalcone.data.model.Planet
 import com.sigiri.findingfalcone.data.model.Token
 import com.sigiri.findingfalcone.data.model.Vehicles
 import retrofit2.Response
@@ -19,7 +19,7 @@ interface FalconsApiInterface {
     }
 
     @GET("/planets")
-    suspend fun getPlanets(): Response<Planets>
+    suspend fun getPlanets(): Response<List<Planet>>
 
     @GET("/vehicles")
     suspend fun getVehicles(): Response<Vehicles>

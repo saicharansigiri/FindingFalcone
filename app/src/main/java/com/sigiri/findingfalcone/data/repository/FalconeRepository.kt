@@ -3,13 +3,13 @@ package com.sigiri.findingfalcone.data.repository
 import com.sigiri.findingfalcone.data.api.FalconsApiInterface
 import com.sigiri.findingfalcone.data.model.FindFalconeRequest
 import com.sigiri.findingfalcone.data.model.FindingFalconeResponse
-import com.sigiri.findingfalcone.data.model.Planets
+import com.sigiri.findingfalcone.data.model.Planet
 import com.sigiri.findingfalcone.data.model.Token
 import com.sigiri.findingfalcone.data.model.Vehicles
 
 class FalconeRepository(private val falconeApiInterface: FalconsApiInterface) {
 
-    suspend fun getPlanets(): Planets? {
+    suspend fun getPlanets(): List<Planet>? {
         return falconeApiInterface.getPlanets().body()
     }
 
