@@ -5,7 +5,7 @@ import com.sigiri.findingfalcone.data.model.FindFalconeRequest
 import com.sigiri.findingfalcone.data.model.FindingFalconeResponse
 import com.sigiri.findingfalcone.data.model.Planet
 import com.sigiri.findingfalcone.data.model.Token
-import com.sigiri.findingfalcone.data.model.Vehicles
+import com.sigiri.findingfalcone.data.model.Vehicle
 
 class FalconeRepository(private val falconeApiInterface: FalconsApiInterface) {
 
@@ -13,7 +13,7 @@ class FalconeRepository(private val falconeApiInterface: FalconsApiInterface) {
         return falconeApiInterface.getPlanets().body()
     }
 
-    suspend fun getVehicles(): Vehicles? {
+    suspend fun getVehicles(): List<Vehicle>? {
         return falconeApiInterface.getVehicles().body()
     }
 

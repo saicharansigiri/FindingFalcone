@@ -5,10 +5,6 @@ data class Planet(
     val distance: Int
 )
 
-data class Vehicles(
-    val data: List<Vehicle>
-)
-
 data class Vehicle(
     val name: String,
     val totalNo: Int,

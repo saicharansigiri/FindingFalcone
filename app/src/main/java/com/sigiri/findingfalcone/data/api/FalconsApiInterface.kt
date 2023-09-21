@@ -4,7 +4,7 @@ import com.sigiri.findingfalcone.data.model.FindFalconeRequest
 import com.sigiri.findingfalcone.data.model.FindingFalconeResponse
 import com.sigiri.findingfalcone.data.model.Planet
 import com.sigiri.findingfalcone.data.model.Token
-import com.sigiri.findingfalcone.data.model.Vehicles
+import com.sigiri.findingfalcone.data.model.Vehicle
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Headers
@@ -22,7 +22,7 @@ interface FalconsApiInterface {
     suspend fun getPlanets(): Response<List<Planet>>
 
     @GET("/vehicles")
-    suspend fun getVehicles(): Response<Vehicles>
+    suspend fun getVehicles(): Response<List<Vehicle>>
 
     @Headers(ACCEPT_JSON)
     @POST("/token")
