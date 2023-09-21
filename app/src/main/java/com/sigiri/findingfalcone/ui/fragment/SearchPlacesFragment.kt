@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import com.sigiri.findingfalcone.core.AppAction
 import com.sigiri.findingfalcone.core.BaseFragment
+import com.sigiri.findingfalcone.core.WidgetCallBack
 import com.sigiri.findingfalcone.data.api.ApiUtils
 import com.sigiri.findingfalcone.data.api.FalconsApiInterface
 import com.sigiri.findingfalcone.data.repository.FalconeRepository
@@ -13,7 +15,7 @@ import com.sigiri.findingfalcone.databinding.FragmentSearchPlacesBinding
 import com.sigiri.findingfalcone.viewmodel.MyViewModelFactory
 import com.sigiri.findingfalcone.viewmodel.SearchPlacesViewModel
 
-class SearchPlacesFragment : BaseFragment<SearchPlacesViewModel, FragmentSearchPlacesBinding>() {
+class SearchPlacesFragment : BaseFragment<SearchPlacesViewModel, FragmentSearchPlacesBinding>(),WidgetCallBack {
 
     override fun setUpViewBinding(
         inflater: LayoutInflater,
@@ -34,6 +36,17 @@ class SearchPlacesFragment : BaseFragment<SearchPlacesViewModel, FragmentSearchP
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.unselectedPlanetsList.observe(viewLifecycleOwner) {
+            updateSpinner(it)
+        }
+    }
+
+    private fun updateSpinner(options: List<String>) {
+        binding.spinnerItem.spinnerItemParent.updateSpinner(options,this)
+    }
+
+    override fun onItemClick(action: AppAction) {
+        /* no-op */
     }
 
 }

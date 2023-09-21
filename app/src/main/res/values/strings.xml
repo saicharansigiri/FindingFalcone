@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">FindingFalcone</string>
     <string name="find_falcone">Find Falcone!</string>
+    <string name="no_items_selected">Select</string>
 </resources>
