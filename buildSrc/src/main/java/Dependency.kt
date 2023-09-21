@@ -47,7 +47,7 @@ object Lifecycle {
 }
 
 object Navigation {
-    private const val navigationVersion = "2.7.3"
+    private const val navigationVersion = "2.5.3"
     const val NAVIGATION_FRAGMENT =
         "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
     const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:$navigationVersion"
